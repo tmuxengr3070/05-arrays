@@ -1,36 +1,19 @@
-// Get references to the form and suggestion section
-const weatherForm = document.getElementById('weatherForm');
-const suggestionSection = document.getElementById('suggestion');
+// Set up event listener for when the user selects a genre
+document.getElementById("genre").addEventListener("change", function() {
+  // Get the selected genre
+  const selectedGenre = document.getElementById("genre").value;
 
-// Add an event listener to handle form submission
-weatherForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the form from submitting the traditional way
-
-  // Get the selected weather and temperature input values
-  const weather = document.getElementById('weather').value;
-  const temperature = document.getElementById('temperature').value;
-
-  // Initialize a suggestion message
-  let suggestion = '';
-
-  // Determine the suggestion based on the weather
-  if (weather === 'sunny') {
-    suggestion = `It's sunny! 😎 Don't forget your sunglasses and sunscreen.`;
-  } else if (weather === 'cloudy' || weather === 'rainy') {
-    suggestion = `It's ${weather}! A light jacket might be a good idea.`;
-  } else if (weather === 'snowy') {
-    suggestion = `It's snowy! ❄️ Wear a warm coat and boots.`;
-  } else if (weather === 'windy') {
-    suggestion = `It's windy! 🌬️ A windbreaker would be useful.`;
-  } else {
-    suggestion = `Please select a weather condition.`;
+  // Add movies to the movieList based on the selected genre
+  if (selectedGenre === "Comedy") {
+    console.log("You selected 'Comedy'");
+  } else if (selectedGenre === "Action") {
+    console.log("You selected 'Action'");
+  } else if (selectedGenre === "Drama") {
+    console.log("You selected 'Drama'");
+  } else if (selectedGenre === "Sci-Fi") {
+    console.log("You selected 'Sci-Fi'");
   }
 
-  // Check if the temperature is below 50°F
-  if (temperature < 50) {
-    suggestion += ` Also, it's quite cold! 🥶 Wear a warm jacket.`;
-  }
-
-  // Display the suggestion message
-  suggestionSection.innerHTML = `<p>${suggestion}</p>`;
+  // Display the list of movies on the page
+  document.getElementById("movieRecommendations").innerText = `Enjoy: !`;
 });
