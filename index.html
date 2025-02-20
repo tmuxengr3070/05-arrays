@@ -1,50 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DayReady App</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&family=Merriweather:wght@300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Movie Recommendations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
-    <h1><i class="fas fa-cloud-sun"></i> DayReady App</h1>
-    <h2>Sun, rain, or snow—we've got you covered.</h2>
-  </header>
-
-  <main>
-    <div class="container">
-      <section id="suggestion">
-        <p>Let's get you ready!</p>
-      </section>
-
-      <form id="weatherForm">
-        <div class="form-group">
-          <label for="weather">Weather:</label>
-          <select id="weather" name="weather">
-            <option value="" disabled selected>Select weather</option>
-            <option value="sunny">Sunny</option>
-            <option value="cloudy">Cloudy</option>
-            <option value="rainy">Rainy</option>
-            <option value="snowy">Snowy</option>
-            <option value="windy">Windy</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="temperature">Temperature (°F):</label>
-          <input type="number" id="temperature" name="temperature" placeholder="e.g., 72" />
-        </div>
-        <button type="submit" class="submit-button">Get Suggestion</button>
-      </form>
-    </div>
-  </main>
+  <div class="container">
+    <h1>🍿 Movie Recommendations</h1>
+    <select id="genre">
+      <option value="" disabled selected>Select a genre</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+    </select>
+    <p id="movieRecommendations">Please select a category</p>
+  </div>
   <script src="script.js"></script>
 </body>
 
