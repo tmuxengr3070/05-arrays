@@ -1,3 +1,32 @@
+// Create arrays for each genre with 4 movie titles
+const comedyMovies = [
+  "The Hangover",
+  "Superbad",
+  "Bridesmaids",
+  "Step Brothers"
+];
+
+const actionMovies = [
+  "Mad Max: Fury Road",
+  "John Wick",
+  "Die Hard",
+  "The Avengers"
+];
+
+const dramaMovies = [
+  "Forrest Gump",
+  "The Shawshank Redemption",
+  "The Godfather",
+  "A Beautiful Mind"
+];
+
+const sciFiMovies = [
+  "Inception",
+  "Interstellar",
+  "The Matrix",
+  "Blade Runner 2049"
+];
+
 // Set up event listener for when the user selects a genre
 document.getElementById("genre").addEventListener("change", function() {
   // Get the selected genre
